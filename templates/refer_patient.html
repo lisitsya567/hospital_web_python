@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Направление пациента</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/register_patient">Регистрация пациента</a></li>
+                <li><a href="/view_patients">Просмотр пациентов</a></li>
+                <li><a href="/refer_patient">Направление пациента</a></li>
+            </ul>
+        </nav>
+    </header>
+    <h1>Направление пациента на лечебно-диагностические мероприятия</h1>
+    <form method="post">
+        <label for="patient_id">ID пациента:</label><br>
+        <input type="text" id="patient_id" name="patient_id" required><br><br>
+
+        <label for="date">Дата:</label><br>
+        <input type="date" id="date" name="date" required><br><br>
+
+        <label for="time">Время:</label><br>
+        <input type="time" id="time" name="time" required><br><br>
+
+        <label for="room_number">Номер процедурного кабинета:</label><br>
+        <input type="text" id="room_number" name="room_number" required><br><br>
+
+        <label for="diagnosis">Диагноз:</label><br>
+        <input type="text" id="diagnosis" name="diagnosis" required><br><br>
+
+        <label for="procedure_name">Название процедуры:</label><br>
+        <input type="text" id="procedure_name" name="procedure_name" required><br><br>
+
+        <input type="submit" value="Направить пациента">
+    </form>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Просмотр направления</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/register_patient">Регистрация пациента</a></li>
+                <li><a href="/view_patients">Просмотр пациентов</a></li>
+                <li><a href="/refer_patient">Направление пациента</a></li>
+            </ul>
+        </nav>
+    </header>
+    <h1>Просмотр данных направления</h1>
+    <form method="post">
+        <label for="date">Дата:</label><br>
+        <input type="date" id="date" name="date" value="{{ referral[2] }}" required><br><br>
+
+        <label for="time">Время:</label><br>
+        <input type="time" id="time" name="time" value="{{ referral[3] }}" required><br><br>
+
+        <label for="room_number">Номер процедурного кабинета:</label><br>
+        <input type="text" id="room_number" name="room_number" value="{{ referral[4] }}" required><br><br>
+
+        <label for="diagnosis">Диагноз:</label><br>
+        <input type="text" id="diagnosis" name="diagnosis" value="{{ referral[5] }}" required><br><br>
+
+        <label for="procedure_name">Название процедуры:</label><br>
+        <input type="text" id="procedure_name" name="procedure_name" value="{{ referral[6] }}" required><br><br>
+
+        <input type="submit" value="Сохранить изменения">
+    </form>
+</body>
+</html>
