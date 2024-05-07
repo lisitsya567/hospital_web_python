@@ -4,22 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Просмотр направлений</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
     <header>
         <nav>
             <ul>
-                <li><a href="/register_patient">Регистрация пациента</a></li>
-                <li><a href="/view_patients">Просмотр пациентов</a></li>
-                <li><a href="/refer_patient">Направление пациента</a></li>
+<!--                <li><a href="/register_patient">Регистрация пациента</a></li>-->
+<!--                <li><a href="/view_patients">Просмотр пациентов</a></li>-->
+<!--                <li><a href="/refer_patient">Направление пациента</a></li>-->
+                {% include 'header.html' %}
             </ul>
         </nav>
     </header>
     <h1>Просмотр всех направлений</h1>
-    <ul>
-        {% for referral in referrals %}
-            <li><a href="/referral/{{ referral[0] }}">{{ referral[0] }}</a></li>
-        {% endfor %}
-    </ul>
+
 </body>
 </html>
